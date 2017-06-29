@@ -32,6 +32,7 @@ import XCTest
 open class CallHandlerImpl: CallHandler {
 
   open var state = State.none
+  open var verificationMode: VerificationMode!
   open var argumentsOfSpecificCall: [Any?]?
 
   fileprivate let mockFailer: MockFailer
@@ -39,8 +40,6 @@ open class CallHandlerImpl: CallHandler {
   // this is the stub which is currenly being configured or called
   fileprivate var stub: Stub!
   fileprivate var stubs = [Stub]()
-
-  fileprivate var verificationMode: VerificationMode!
 
   fileprivate var callHistory = [String: [[Any?]]]()
   fileprivate var callOrder = 1

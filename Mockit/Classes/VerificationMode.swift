@@ -105,7 +105,7 @@ open class AtMostOnce: VerificationMode {
 
 open class Times: VerificationMode {
 
-  var times = 0
+  public var times = 0
 
   public init(times: Int) {
     self.times = times
